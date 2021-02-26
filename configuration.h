@@ -13,12 +13,12 @@
 /**
  * Firmware verzió
  */
-#define FW_VERSION "v1.0.0"
+#define FW_VERSION "v1.0.2"
 
 /**
  * Firmware módosításának dátuma
  */
-#define FW_DATE "2021.02.20."
+#define FW_DATE "2021.02.26."
 
 /**
  * Fejlesztő
@@ -29,6 +29,12 @@
  * Pozicionáló fej végállás érzékelő
  */
 #define HEAD_ENDSTOP  2
+
+/**
+ * A fej nem menjen ki teljesen az orsó széléig
+ */
+#define HEAD_MARGIN  128
+
 
 /**
  * Menet számláló érzékelő
@@ -61,12 +67,12 @@
 /**
  * Teljes fordulat alatt megtett távolság mm-ben
  */
-#define STEPPER_FULL_TURN_DISTANCE 24
+#define STEPPER_FULL_TURN_DISTANCE 25
 
 /**
  * 1mm megtételéhez szükséges lépések (lefelé kerekítjük)
  */
-#define SPMM          floor(STEPPER_FULL_TURN / STEPPER_FULL_TURN_DISTANCE) * 0.96 // Magic :D 
+#define SPMM  floor(STEPPER_FULL_TURN / STEPPER_FULL_TURN_DISTANCE) * 0.96 // Magic :D 
 
 /**
  * Induláskor a stepper automatikus beállítása
